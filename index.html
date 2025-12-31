@@ -12,7 +12,7 @@
   margin:0;
   padding:0;
   box-sizing:border-box;
-  cursor:url("images/heart.png"), auto;
+  cursor:url("https://raw.githubusercontent.com/Ujwalavelpula/javeed_heena/main/heart.png"), auto;
 }
 
 body{
@@ -28,6 +28,7 @@ section{
   justify-content:center;
   align-items:center;
   text-align:center;
+  transition:opacity 0.8s ease, transform 0.8s ease;
 }
 
 .hidden{display:none;}
@@ -59,15 +60,17 @@ button{
   background:linear-gradient(135deg,#1e90ff,#00bfff);
   color:#fff;
 }
+button:hover{
+  transform:scale(1.05);
+  box-shadow:0 10px 30px rgba(0,191,255,0.6);
+}
 
 .story{
   text-align:left;
   font-size:21px;
   line-height:2.8;
   white-space:pre-wrap;
-  letter-spacing:0.4px;
 }
-
 
 .couple{
   width:260px;
@@ -92,10 +95,8 @@ video{
   border-radius:28px;
   background:rgba(255,255,255,0.22);
   text-align:left;
-  line-height:2;
 }
 
-/* Floating hearts */
 .heart{
   position:fixed;
   bottom:-20px;
@@ -113,24 +114,20 @@ video{
   flex-wrap:wrap;
   margin-top:30px;
 }
-
 .flip{
   width:160px;
   height:220px;
   perspective:1000px;
 }
-
 .flip-inner{
   width:100%;
   height:100%;
   transition:transform 0.8s;
   transform-style:preserve-3d;
 }
-
 .flip:hover .flip-inner{
   transform:rotateY(180deg);
 }
-
 .flip-front, .flip-back{
   position:absolute;
   width:100%;
@@ -139,31 +136,19 @@ video{
   border-radius:20px;
   overflow:hidden;
 }
-
-.flip-front img,
-.flip-back img{
+.flip-front img, .flip-back img{
   width:100%;
   height:100%;
   object-fit:cover;
 }
-
 .flip-back{
   transform:rotateY(180deg);
 }
-button:hover{
-  transform:scale(1.05);
-  box-shadow:0 10px 30px rgba(0,191,255,0.6);
-}
-section{
-  transition:opacity 0.8s ease, transform 0.8s ease;
-}
-
 </style>
 </head>
 
 <body>
 
-<!-- 💙 Floating Hearts -->
 <script>
 setInterval(()=>{
   const h=document.createElement("div");
@@ -179,15 +164,12 @@ setInterval(()=>{
 <section id="intro">
   <div class="hero">
     <h1>Hi Javeed… 💙</h1>
-    <p>
-      I want to show you our story.<br>
-      Slowly. Honestly. From my heart.
-    </p>
+    <p>I want to show you our story.<br>Slowly. Honestly. From my heart.</p>
     <button onclick="go('story')">Start ➜</button>
   </div>
 </section>
 
-<!-- LOVE STORY (TYPING) -->
+<!-- STORY -->
 <section id="story" class="hidden">
   <div class="card">
     <h2>📖 Our Love Story</h2>
@@ -196,156 +178,97 @@ setInterval(()=>{
   </div>
 </section>
 
-<!-- IMAGE: CHARMINAR -->
+<!-- CHARMINAR -->
 <section id="charminarImg" class="hidden">
   <div class="card">
-    <img src="charminar.jpg" class="couple">
-    <h2>🕌 Charminar — Recently</h2>
-    <p class="story">
-Crowd madhyalo kuda😗,
-nee pakkane unna feeling 💙
-    </p>
+    <img src="https://raw.githubusercontent.com/Ujwalavelpula/javeed_heena/main/charminar.jpg" class="couple">
+    <h2>🕌 Charminar</h2>
+    <p class="story">Crowd madhyalo kuda😗, nee pakkane unna feeling 💙</p>
     <button onclick="go('charminarVid')">Watch Video ➜</button>
   </div>
 </section>
 
-<!-- VIDEO: CHARMINAR -->
 <section id="charminarVid" class="hidden">
   <div class="card">
-    <h2>🎥Moment with you</h2>
     <div class="video-box">
       <video controls>
-        <source src="1.mp4">
+        <source src="https://raw.githubusercontent.com/Ujwalavelpula/javeed_heena/main/1.mp4">
       </video>
     </div>
     <button onclick="go('restaurantImg')">Next ➜</button>
   </div>
 </section>
 
-<!-- IMAGE: RESTAURANT -->
 <section id="restaurantImg" class="hidden">
   <div class="card">
-    <img src="cafe.jpg" class="couple">
+    <img src="https://raw.githubusercontent.com/Ujwalavelpula/javeed_heena/main/cafe.jpg" class="couple">
     <h2>🍽️ Restaurant</h2>
-    <p class="story">
-Food kanna sweet ga
-nee smile 💙..
-Our smiles are enough to prove how happy we are together!🫠 
-    </p>
+    <p class="story">Food kanna sweet ga nee smile 💙</p>
     <button onclick="go('restaurantVid')">Watch Video ➜</button>
   </div>
 </section>
 
-<!-- VIDEO: RESTAURANT -->
 <section id="restaurantVid" class="hidden">
   <div class="card">
-    <h2>🎥Moment</h2>
     <div class="video-box">
       <video controls>
-        <source src="2.mp4">
+        <source src="https://raw.githubusercontent.com/Ujwalavelpula/javeed_heena/main/2.mp4">
       </video>
     </div>
     <button onclick="go('collegeImg')">Next ➜</button>
   </div>
 </section>
 
-<!-- IMAGE: COLLEGE -->
 <section id="collegeImg" class="hidden">
   <div class="card">
-    <img src="clg.jpg" class="couple">
+    <img src="https://raw.githubusercontent.com/Ujwalavelpula/javeed_heena/main/clg.jpg" class="couple">
     <h2>🎓 College Days</h2>
-    <p class="story">
-Love lo deep ga unna manam😍😉 💙
-    </p>
+    <p class="story">Love lo deep ga unna manam 💙</p>
     <button onclick="go('birthdayImg')">Next ➜</button>
   </div>
 </section>
 
-<!-- IMAGE: BIRTHDAY -->
 <section id="birthdayImg" class="hidden">
   <div class="card">
-    <img src="birthday.jpg" class="couple">
-    <h2>🎂 My Birthday at Your Home</h2>
-    <p class="story">
-Na life lo best birthday 💙..alane konchem sad ga feel ayina birthday because of that tension😭🥲
-    </p>
+    <img src="https://raw.githubusercontent.com/Ujwalavelpula/javeed_heena/main/birthday.jpg" class="couple">
+    <h2>🎂 Birthday</h2>
     <button onclick="go('birthdayVid')">Watch Video ➜</button>
   </div>
 </section>
 
-<!-- VIDEO: BIRTHDAY -->
 <section id="birthdayVid" class="hidden">
   <div class="card">
-    <h2>🎥 Moment</h2>
-    <div class="video-box" class="rotate-video">
+    <div class="video-box">
       <video controls>
-        <source src="3.mp4">
+        <source src="https://raw.githubusercontent.com/Ujwalavelpula/javeed_heena/main/3.mp4">
       </video>
     </div>
     <button onclick="go('timeline')">Next ➜</button>
   </div>
 </section>
 
-<!-- TIMELINE -->
 <section id="timeline" class="hidden">
   <div class="card">
     <h2>🕰️ Our Timeline</h2>
+    <div class="event">Jan 25 — First spark</div>
+    <div class="event">Feb 7 — First call</div>
+    <div class="event">Mar 25 — Proposal</div>
 
-    <div class="event"><b>Jan 25</b> — First spark during college rally</div>
-    <div class="event"><b>Feb 7</b> — First message & first call</div>
-    <div class="event"><b>Mar 25</b> — Proposal & becoming “us”</div>
-    <div class="event"><b>Sep 19</b> — Family acceptance</div>
-
-    <button onclick="go('proposal')">Next ➜</button>
     <div class="flipbook">
-  <div class="flip">
-    <div class="flip-inner">
-      <div class="flip-front">
-        <img src="1.png">
-      </div>
-      <div class="flip-back">
-        <img src="2.png">
-      </div>
+      <img src="https://raw.githubusercontent.com/Ujwalavelpula/javeed_heena/main/1.png">
+      <img src="https://raw.githubusercontent.com/Ujwalavelpula/javeed_heena/main/2.png">
+      <img src="https://raw.githubusercontent.com/Ujwalavelpula/javeed_heena/main/3.png">
+      <img src="https://raw.githubusercontent.com/Ujwalavelpula/javeed_heena/main/4.png">
     </div>
-  </div>
 
-  <div class="flip">
-    <div class="flip-inner">
-      <div class="flip-front">
-        <img src="3.png">
-      </div>
-      <div class="flip-back">
-        <img src="4.png">
-      </div>
-    </div>
-  </div>
-</div>
+    <button onclick="go('final')">Next ➜</button>
   </div>
 </section>
 
-<!-- PROPOSAL -->
-<section id="proposal" class="hidden">
-  <div class="card">
-    <h2>💍 Will You Marry Me?</h2>
-    <p style="font-size:22px;line-height:2.2;">
-Ee Year laney every year…<br>
-na hand nee hand lo forever undali 💙
-    </p>
-      <img style="width:100%;max-width:300px;" src="4.png"><br><br>
-    <button style="text-align: center;" onclick="go('final')">YES 💙</button>
-  </div>
-</section>
-
-<!-- FINAL -->
 <section id="final" class="hidden">
   <div class="hero">
-    <h1>Happy New Year Patlu..💙</h1>
-    <p>
-      Javeed…<br>
-      na life lo biggest blessing nuvvu.<br>
-      Forever starts with YOU 💙<br><br>
-      — Heena
-    </p>
+    <h1>Happy New Year 💙</h1>
+    <p>Forever starts with YOU<br>— Heena</p>
   </div>
 </section>
 
@@ -355,66 +278,13 @@ function go(id){
   document.getElementById(id).classList.remove("hidden");
 }
 
-/* Typing Love Story */
-const text = `It all started as just a feeling…
-
-Na 2nd year 2nd semester lo, B block lo ninnu first time chusina roju,
-checks shirt, plain pant, formal in-shirt, neat hairstyle…
-appude na heart cheppindi —
-“Idi na future husband ideal type” 💙
-
-Friends andariki ni gurinchi cheppadam start chesa,
-just ninnu telusukovali ani.
-Prathi sari ninnu chudali ani na eyes automatic ga ninnu search chesevi.
-
-Oka roju phone lo matladuthu big smile tho chusaka,
-“maybe he is committed” ani konchem disappoint ayyanu.
-
-Jan 25 rally roju,
-almost half an hour ninnu matrame chustunna.
-Nuvvu kuda nannu chusav.
-Aa moment lo na heart cheppindi —
-maybe he has feelings for me 🫶
-
-Feb 7 evening,
-oka new Instagram account create chesi,
-dhairyam techukoni text chesa.
-Nuvvu nammale, call chesav…
-Aa call na life lo turning point.
-
-Konni rojulu tarvata,
-nuvvu na class bayata wait chesav.
-Sad ayyi kuda, natho matladav.
-Slow ga nuvvu na every detail telusukunnav.
-
-Shivaratri roju,
-nee kosam fasting undi indirect ga propose chesa.
-Nuvvu adigav — “Do you love me?”
-Nenu yes ani cheppina aa second,
-na life maripoindi.
-
-March 25,
-nuvvu nannu propose chesav.
-Hugs, kisses, movies, YSR park…
-nenu happiest girl ayyanu.
-
-Sep 19,
-mee family nannu daughter-in-law ga accept chesaru.
-Aa roju na life lo biggest blessing.
-
-Javeed…
-Ee story lo prathi feeling real.
-Prathi line na heart nunchi ochindi.`;
-
+const text=`It all started as just a feeling…`;
 let i=0;
 const el=document.getElementById("storyText");
-const interval=setInterval(()=>{
-  el.innerText+=text.charAt(i);
-  i++;
-  if(i===text.length)clearInterval(interval);
+setInterval(()=>{
+  if(i<text.length) el.innerText+=text.charAt(i++);
 },40);
 </script>
 
 </body>
 </html>
-
